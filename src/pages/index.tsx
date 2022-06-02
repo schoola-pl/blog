@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import PageTemplate from '../components/templates/PageTemplate/PageTemplate';
-import Waves from '../assets/icons/Waves.svg';
+import FirstSection from '../views/FirstSection/FirstSection';
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageTemplate>
-        <Image width="500" height="700" alt="waves" src={Waves} />
+        <FirstSection />
       </PageTemplate>
     </div>
   );
