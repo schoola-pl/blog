@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageTemplate from '../components/templates/PageTemplate/PageTemplate';
 import FirstSection from '../views/FirstSection/FirstSection';
+import Footer from '../components/organisms/Footer/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <PageTemplate>
         <FirstSection />
       </PageTemplate>
+      <Footer />
     </div>
   );
 };
