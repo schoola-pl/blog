@@ -1,6 +1,6 @@
 import { Wrapper } from './Footer.styles';
 
-const Navbar = () => {
+const Footer = () => {
   return (
     <Wrapper>
       <p>Communite 2022 &copy; All rights reseverd.</p>
@@ -9,4 +9,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Footer;
