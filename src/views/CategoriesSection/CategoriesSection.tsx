@@ -30,16 +30,24 @@ export const CategoriesList = styled.ul`
   flex-wrap: wrap;
 `;
 
+enum Categories {
+  prawoOswiatowe,
+  edukacja,
+  usprawnienia,
+  praca,
+  hajs
+}
+
 const CategoriesSection = () => {
   return (
     <Wrapper>
       <h1>Kategorie</h1>
       <CategoriesList>
-        <Category>Nauka</Category>
-        <Category>Nauka</Category>
-        <Category>Nauka</Category>
-        <Category>Nauka</Category>
-        <Category>Nauka</Category>
+        <Category categoryType={Categories.prawoOswiatowe} />
+        <Category categoryType={Categories.edukacja} />
+        <Category categoryType={Categories.praca} />
+        <Category categoryType={Categories.hajs} />
+        <Category categoryType={Categories.usprawnienia} />
       </CategoriesList>
     </Wrapper>
   );

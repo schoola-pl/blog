@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../../../assets/styles/theme';
 
 enum Categories {
   prawoOswiatowe,
@@ -8,26 +9,58 @@ enum Categories {
   hajs
 }
 
-const categoriesStyles = (fontColor: string, backgroundColor: string) => {
-  switch (fontColor || backgroundColor) {
+const categoriesStyles = (category: Categories) => {
+  switch (category) {
     case Categories.prawoOswiatowe:
       return {
-        fontColor: `${({ theme }) => theme.colors.darkRed} `
+        color: theme.colors.darkRed,
+        backgroundColor: theme.colors.lightRed,
+        categoryType: 'Prawo oświatowe'
+      };
+    case Categories.edukacja:
+      return {
+        color: theme.colors.darkBlue,
+        backgroundColor: theme.colors.accentBlue,
+        categoryType: 'Edukacja'
+      };
+    case Categories.usprawnienia:
+      return {
+        color: theme.colors.darkGreen,
+        backgroundColor: theme.colors.lightGreen,
+        categoryType: 'Usprawnienia'
+      };
+    case Categories.praca:
+      return {
+        color: theme.colors.darkPurple,
+        backgroundColor: theme.colors.lightPurple,
+        categoryType: 'Praca'
+      };
+    case Categories.hajs:
+      return {
+        color: theme.colors.darkYellow,
+        backgroundColor: theme.colors.lightYellow,
+        categoryType: 'Hajs'
       };
   }
 };
 
-export const Category = styled.li<{ type: Categories }>`
-  background-color: #ba79db;
-  color: black;
-  height: 4rem;
-  width: 8rem;
+export const Category = styled.li<{ categoryType: Categories }>`
+  background-color: ${({ categoryType }) => categoriesStyles(categoryType).backgroundColor};
+  color: ${({ categoryType }) => categoriesStyles(categoryType).color};
+  font-size: ${({ theme }) => theme.fontSize.s};
+  box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
+  height: 5rem;
+  width: 11rem;
   border-radius: 2.5rem;
   margin: 0.5rem;
-  color: #5b2079;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${({ theme }) => theme.fontSize.s};
-  box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
+
+  &::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '${({ categoryType }) => categoriesStyles(categoryType).categoryType}';
+  }
 `;
