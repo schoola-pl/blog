@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../../assets/styles/theme';
-
-enum Categories {
-  prawoOswiatowe,
-  edukacja,
-  usprawnienia,
-  praca,
-  hajs
-}
+import { Categories } from '../../../types';
 
 const categoriesStyles = (category: Categories) => {
   switch (category) {
@@ -49,9 +42,9 @@ export const Category = styled.li<{ categoryType: Categories }>`
   color: ${({ categoryType }) => categoriesStyles(categoryType).color};
   font-size: ${({ theme }) => theme.fontSize.s};
   box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
-  height: 5rem;
-  width: 11rem;
-  border-radius: 2.5rem;
+  min-width: 10rem;
+  padding: 1.5rem;
+  border-radius: 3rem;
   margin: 0.5rem;
   display: flex;
   align-items: center;
@@ -61,6 +54,6 @@ export const Category = styled.li<{ categoryType: Categories }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    content: '${({ categoryType }) => categoriesStyles(categoryType).categoryType}';
+    content: '#${({ categoryType }) => categoriesStyles(categoryType).categoryType}';
   }
 `;

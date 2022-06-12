@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Category } from '../../components/atoms/Category/Category';
+import { Categories } from '../../types';
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -26,17 +27,9 @@ export const CategoriesList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 80%;
+  max-width: 95%;
   flex-wrap: wrap;
 `;
-
-enum Categories {
-  prawoOswiatowe,
-  edukacja,
-  usprawnienia,
-  praca,
-  hajs
-}
 
 const CategoriesSection = () => {
   return (
