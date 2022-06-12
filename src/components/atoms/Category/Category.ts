@@ -43,7 +43,7 @@ export const Category = styled.li<{ categoryType: Categories }>`
   font-size: ${({ theme }) => theme.fontSize.s};
   box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
   min-width: 10rem;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 3rem;
   margin: 0.5rem;
   display: flex;
