@@ -16,7 +16,6 @@ export const theme = {
     lightPurple: '#ba79db',
     darkPurple: '#5b2079'
   },
-
   fontSize: {
     xxs: '1rem',
     xs: '1.2rem',
