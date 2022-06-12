@@ -6,7 +6,15 @@ export const theme = {
     mainBlue: '#0f5ff6',
     accentBlue: '#92b6fb',
     lightBlue: '#f4f8ff',
-    accentGray: '#c2c2c2'
+    accentGray: '#c2c2c2',
+    lightYellow: ' #fff27a',
+    darkYellow: '#9c8c00',
+    lightGreen: '#aeffaf',
+    darkGreen: '#00e103',
+    lightRed: '#af0028',
+    darkRed: '#ff6b8c',
+    lightPurple: '#ba79db',
+    darkPurple: '#5b2079'
   },
 
   fontSize: {

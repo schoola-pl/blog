@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageTemplate from '../components/templates/PageTemplate/PageTemplate';
 import FirstSection from '../views/FirstSection/FirstSection';
+import CategoriesSection from '../views/CategoriesSection/CategoriesSection';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <PageTemplate>
         <FirstSection />
+        <CategoriesSection />
       </PageTemplate>
     </div>
   );
