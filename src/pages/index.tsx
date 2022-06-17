@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PageTemplate from '../components/templates/PageTemplate/PageTemplate';
 import FirstSection from '../views/FirstSection/FirstSection';
 import CategoriesSection from '../views/CategoriesSection/CategoriesSection';
+import PostsSection from '../views/PostsSection/PostsSection';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <PageTemplate>
         <FirstSection />
         <CategoriesSection />
+        <PostsSection />
       </PageTemplate>
     </div>
   );
