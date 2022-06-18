@@ -1,20 +1,25 @@
-import { Wrapper, CategoriesList } from './Categories.styles';
+import { CategoriesList, Wrapper } from './Categories.styles';
 import { Category } from '../../components/atoms/Category/Category';
-import { Categories } from '../../types';
+import { CategoriesType } from '../../components/organisms/Articles/Articles.types';
+import React from 'react';
 
-const CategoriesSection = () => {
+const CategoriesSection: React.FC<{
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
+  categories: CategoriesType;
+}> = ({ setCategory, categories }) => {
   return (
     <Wrapper>
-      <h1>Kategorie</h1>
+      <h1>
+        Kategorie <span>postów</span>
+      </h1>
       <CategoriesList>
-        <Category categoryType={Categories.prawoOswiatowe} />
-        <Category categoryType={Categories.edukacja} />
-        <Category categoryType={Categories.praca} />
-        <Category categoryType={Categories.hajs} />
-        <Category categoryType={Categories.usprawnienia} />
+        <Category onClick={() => setCategory('all')} categoryType="Wszystkie" />
+        {categories.map((category) => (
+          <Category onClick={() => setCategory(category)} key={`id-${category}-${Math.floor(Math.random() * 100)}`} categoryType={category} />
+        ))}
       </CategoriesList>
     </Wrapper>
   );
 };
 
-export default CategoriesSection;
+export default React.memo(CategoriesSection);

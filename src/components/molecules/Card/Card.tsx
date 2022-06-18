@@ -1,24 +1,18 @@
-import styled from 'styled-components';
+import Image from 'next/image';
+import { ArticleBody } from '../../organisms/Articles/Articles.types';
+import { router } from 'next/client';
 
-const Wrapper = styled.div`
-  margin-top: 2rem;
-  width: 80%;
-`;
-
-const CardWrapper = styled.div`
-  height: 5rem;
-  width: 100%;
-  background-color: black;
-  max-width: 24rem;
-`;
-
-const Card = () => {
+const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, description, category, thumbnail } }) => {
   return (
-    <Wrapper>
-      <CardWrapper>
-        <h1>Card</h1>
-      </CardWrapper>
-    </Wrapper>
+    <article onClick={() => router.push(`/articles/${slug}`)}>
+      <header>
+        <Image src={thumbnail.url} alt="ksa" width={250} height={250} />
+        <h1>
+          {title} | #{category.title}
+        </h1>
+      </header>
+      <p>{description}</p>
+    </article>
   );
 };
 
