@@ -11,8 +11,7 @@ export const Wrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: ${({ theme }) => theme.fontWeight.semibold};
 
-    &::after {
-      content: ' postów';
+    span {
       color: ${({ theme }) => theme.colors.mainBlue};
     }
   }

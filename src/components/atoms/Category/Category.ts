@@ -37,9 +37,19 @@ const categoriesStyles = (category: Categories) => {
   }
 };
 
-export const Category = styled.li<{ categoryType: Categories }>`
-  background-color: ${({ categoryType }) => categoriesStyles(categoryType).backgroundColor};
-  color: ${({ categoryType }) => categoriesStyles(categoryType).color};
+export const Category = styled.button<{ categoryType: string }>`
+  ${() => {
+    const baseColor = Math.floor(Math.random() * 360);
+    return `
+      background-color: hsl(${baseColor}, 55%, 65%);
+      color: hsl(${baseColor}, 55%, 25%);
+    `;
+  }}
+  opacity: 0.8;
+  cursor: pointer;
+  border: 0;
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in-out, opacity 0.1s ease-in;
   font-size: ${({ theme }) => theme.fontSize.s};
   box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
   min-width: 10rem;
@@ -54,6 +64,12 @@ export const Category = styled.li<{ categoryType: Categories }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    content: '#${({ categoryType }) => categoriesStyles(categoryType).categoryType}';
+    content: '#${({ categoryType }) => categoryType}';
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    transform: scale(1);
   }
 `;

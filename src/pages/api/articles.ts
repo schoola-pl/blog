@@ -12,6 +12,9 @@ const query = `
     category {
       title
     }
+    thumbnail {
+      url
+    }
     _firstPublishedAt
   }
 
