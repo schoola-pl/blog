@@ -24,7 +24,7 @@ export const HeadingSection = styled.div`
   div {
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 35%;
+    grid-template-columns: 50% 30%;
     align-items: center;
 
     button {
@@ -34,8 +34,8 @@ export const HeadingSection = styled.div`
       border: none;
       background-color: ${({ theme }) => theme.colors.mainBlue};
       color: white;
-      height: 5rem;
-      width: 14rem;
+      height: 4.75rem;
+      width: 13rem;
       border-radius: 2.5rem;
       margin-left: 5rem;
     }

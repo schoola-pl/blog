@@ -6,6 +6,8 @@ import Footer from '../components/organisms/Footer/Footer';
 import Articles from '../components/organisms/Articles/Articles';
 import axios from 'axios';
 import { ArticlesType, CategoriesType } from '../components/organisms/Articles/Articles.types';
+import CategoriesSection from '../views/CategoriesSection/CategoriesSection';
+import PostsSection from '../views/PostsSection/PostsSection';
 
 const Home: NextPage<{ articles: ArticlesType; categories: CategoriesType }> = ({ articles, categories }) => {
   return (
@@ -18,6 +20,8 @@ const Home: NextPage<{ articles: ArticlesType; categories: CategoriesType }> = (
       <PageTemplate>
         <FirstSection />
         <Articles articles={articles} categories={categories} />
+        <CategoriesSection />
+        <PostsSection />
       </PageTemplate>
       <Footer />
     </div>
