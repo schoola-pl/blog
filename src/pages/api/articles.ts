@@ -70,7 +70,7 @@ export default async function handler(
       },
       {
         headers: {
-          Authorization: `Bearer 640a0750e0f9f5db8e8640c11ab644`
+          Authorization: `Bearer ${process.env.NEXT_DATOCMS_API_READ_TOKEN}`
         }
       }
     );
