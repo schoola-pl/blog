@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Category } from '../../atoms/Category/Category';
 import { ArticleBody } from '../../organisms/Articles/Articles.types';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Wrapper = styled.article`
   padding: 1rem;
@@ -23,7 +24,7 @@ const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, desc
   return (
     <Wrapper onClick={() => router.push(`/articles/${slug}`)}>
       <header>
-        <img src={thumbnail.url} alt="article photo" width={250} height={250} />
+        <Image src={thumbnail.url} alt="article photo" width={250} height={250} />
         <h1>
           {title} | <Category categoryType={`${category.title}`} />
         </h1>
