@@ -5,7 +5,7 @@ const Articles = () => {
   const router = useRouter();
   useEffect(() => {
     router.push('/');
-  }, []);
+  }, [router]);
 
   return <p>Loading...</p>;
 };
