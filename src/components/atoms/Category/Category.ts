@@ -36,7 +36,7 @@ const categoriesStyles = (categoryType: string) => {
   }
 };
 
-export const Category = styled.button<{ categoryType: string }>`
+export const Category = styled.button<{ categoryType: string; small?: boolean }>`
   background-color: ${({ categoryType }) => categoriesStyles(categoryType)?.backgroundColor};
   color: ${({ categoryType }) => categoriesStyles(categoryType)?.color};
   opacity: 0.8;
@@ -66,4 +66,11 @@ export const Category = styled.button<{ categoryType: string }>`
     opacity: 1;
     transform: scale(1);
   }
+
+  ${({ small }) =>
+    small &&
+    `
+   padding: 1rem 3rem 1rem 3rem;
+    opacity: 1;
+  `}
 `;

@@ -5,31 +5,50 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 const Wrapper = styled.article`
-  padding: 1rem;
+  min-height: 30rem;
+  width: 37rem;
+  box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
+  margin-bottom: 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+`;
+
+const Header = styled.header`
+  position: relative;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
-  border-radius: 2.5rem;
-  max-width: 32rem;
-  border: 1px solid red;
-  margin-bottom: 2rem;
 `;
 
-const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, description, category, thumbnail } }) => {
+const InfoSection = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  h1 {
+    padding: 1.5rem;
+    font-weight: ${({ theme }) => theme.fontWeight.semibold};
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
+`;
+
+const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, category, thumbnail } }) => {
   const router = useRouter();
 
   return (
     <Wrapper onClick={() => router.push(`/articles/${slug}`)}>
-      <header>
-        <Image src={thumbnail.url} alt="article photo" width={250} height={250} />
-        <h1>
-          {title} | <Category categoryType={`${category.title}`} />
-        </h1>
-      </header>
-      <p>{description}</p>
+      <Header>
+        <Image src={thumbnail.url} alt="article photo" height="200" width="370" />
+        <InfoSection>
+          <h1>{title}</h1>
+          <Category categoryType={`${category.title}`} small />
+        </InfoSection>
+      </Header>
     </Wrapper>
   );
 };
