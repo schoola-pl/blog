@@ -1,50 +1,44 @@
 import styled from 'styled-components';
 import { theme } from '../../../assets/styles/theme';
-import { Categories } from '../../../types';
 
-const categoriesStyles = (category: Categories) => {
-  switch (category) {
-    case Categories.prawoOswiatowe:
+const categoriesStyles = (categoryType: string) => {
+  switch (categoryType) {
+    case 'Prawo oświatowe':
       return {
         color: theme.colors.darkRed,
         backgroundColor: theme.colors.lightRed,
-        categoryType: 'Prawo oświatowe'
+        categoryType
       };
-    case Categories.edukacja:
+    case 'Edukacja':
       return {
         color: theme.colors.darkBlue,
         backgroundColor: theme.colors.accentBlue,
-        categoryType: 'Edukacja'
+        categoryType
       };
-    case Categories.usprawnienia:
+    case 'Usprawnienia':
       return {
         color: theme.colors.darkGreen,
         backgroundColor: theme.colors.lightGreen,
-        categoryType: 'Usprawnienia'
+        categoryType
       };
-    case Categories.praca:
+    case 'Praca':
       return {
         color: theme.colors.darkPurple,
         backgroundColor: theme.colors.lightPurple,
-        categoryType: 'Praca'
+        categoryType
       };
-    case Categories.hajs:
+    case 'Hajs':
       return {
         color: theme.colors.darkYellow,
         backgroundColor: theme.colors.lightYellow,
-        categoryType: 'Hajs'
+        categoryType
       };
   }
 };
 
 export const Category = styled.button<{ categoryType: string }>`
-  ${() => {
-    const baseColor = Math.floor(Math.random() * 360);
-    return `
-      background-color: hsl(${baseColor}, 55%, 65%);
-      color: hsl(${baseColor}, 55%, 25%);
-    `;
-  }}
+  background-color: ${({ categoryType }) => categoriesStyles(categoryType)?.backgroundColor};
+  color: ${({ categoryType }) => categoriesStyles(categoryType)?.color};
   opacity: 0.8;
   cursor: pointer;
   border: 0;
@@ -64,7 +58,7 @@ export const Category = styled.button<{ categoryType: string }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    content: '#${({ categoryType }) => categoryType}';
+    content: '#${({ categoryType }) => categoriesStyles(categoryType)?.categoryType}';
   }
 
   &:hover,

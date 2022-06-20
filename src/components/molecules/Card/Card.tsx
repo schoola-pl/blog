@@ -1,19 +1,35 @@
+import styled from 'styled-components';
+import { Category } from '../../atoms/Category/Category';
 import { ArticleBody } from '../../organisms/Articles/Articles.types';
 import { useRouter } from 'next/router';
+
+const Wrapper = styled.article`
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
+  border-radius: 2.5rem;
+  max-width: 32rem;
+  border: 1px solid red;
+  margin-bottom: 2rem;
+`;
 
 const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, description, category, thumbnail } }) => {
   const router = useRouter();
 
   return (
-    <article onClick={() => router.push(`/articles/${slug}`)}>
+    <Wrapper onClick={() => router.push(`/articles/${slug}`)}>
       <header>
-        <img src={thumbnail.url} alt="ksa" width={250} height={250} />
+        <img src={thumbnail.url} alt="article photo" width={250} height={250} />
         <h1>
-          {title} | #{category.title}
+          {title} | <Category categoryType={`${category.title}`} />
         </h1>
       </header>
       <p>{description}</p>
-    </article>
+    </Wrapper>
   );
 };
 
