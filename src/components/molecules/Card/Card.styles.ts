@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.article`
-  min-height: 30rem;
+  height: 33rem;
   width: 37rem;
   box-shadow: ${({ theme }) => theme.innerStyles.boxShadow};
   margin-bottom: 4rem;
@@ -12,18 +12,17 @@ export const Wrapper = styled.article`
 
 export const Header = styled.header`
   position: relative;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 `;
 
 export const InfoSection = styled.div`
+  height: 13rem;
   width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
 
   h1 {
