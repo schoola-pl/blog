@@ -1,16 +1,6 @@
-import styled from 'styled-components';
+import { ArticlesSection } from './PostsSection.styles';
 import Card from '../../components/molecules/Card/Card';
 import { ArticleBody } from '../../components/organisms/Articles/Articles.types';
-
-const ArticlesSection = styled.section`
-  margin-top: 2rem;
-  width: 100vw;
-  display: flex;
-  padding: 2rem;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-`;
 
 const PostSection: React.FC<{ articles: ArticleBody[] }> = ({ articles }) => {
   return (
