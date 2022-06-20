@@ -70,7 +70,7 @@ export const Category = styled.button<{ categoryType: string; small?: boolean }>
   ${({ small }) =>
     small &&
     `
-   padding: 1rem 3rem 1rem 3rem;
+   padding: 1rem 3rem;
     opacity: 1;
   `}
 `;
