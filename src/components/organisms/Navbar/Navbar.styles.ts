@@ -16,9 +16,9 @@ export const Wrapper = styled.div`
     text-decoration: none;
     color: black;
     font-size: ${({ theme }) => theme.fontSize.s};
-  }
 
-  //   &.active {
-  //     opacity: 1;
-  //   }
+    @media (min-width: 700px) {
+      font-size: ${({ theme }) => theme.fontSize.m};
+    }
+  }
 `;
