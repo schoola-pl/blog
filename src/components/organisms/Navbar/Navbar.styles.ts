@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.s};
 
     @media (min-width: 700px) {
-      font-size: ${({ theme }) => theme.fontSize.m};
+      font-size: 1.75rem;
     }
   }
 `;

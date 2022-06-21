@@ -67,6 +67,11 @@ export const Category = styled.button<{ categoryType: string; small?: boolean }>
     transform: scale(1);
   }
 
+  @media (min-width: 700px) {
+    width: 14rem;
+    height: 5.5rem;
+  }
+
   ${({ small }) =>
     small &&
     `
