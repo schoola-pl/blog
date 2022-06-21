@@ -8,6 +8,7 @@ export const Wrapper = styled.article`
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 `;
 
 export const Header = styled.header`
