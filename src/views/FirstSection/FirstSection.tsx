@@ -12,7 +12,7 @@ const FirstSection = () => {
           <button>Explore</button>
         </div>
       </HeadingSection>
-      <Image width="500" height="600" alt="waves" src={Waves} />
+      <Image width="500" height="600" layout="responsive" alt="waves" src={Waves} />
     </Wrapper>
   );
 };

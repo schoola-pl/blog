@@ -3,16 +3,19 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   top: 15vh;
   position: relative;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 `;
 
 export const HeadingSection = styled.div`
   transform: translateY(-10%);
+  width: 100%;
   position: absolute;
   z-index: 1;
-  display: grid;
-  grid-template-rows: 45% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 2rem;
 
   h1 {
