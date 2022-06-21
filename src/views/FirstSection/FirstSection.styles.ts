@@ -66,6 +66,7 @@ export const HeadingSection = styled.div`
       @media (min-width: 700px) {
         height: 5rem;
         width: 15rem;
+        margin-right: 2rem;
         font-size: ${({ theme }) => theme.fontSize.s};
       }
     }
