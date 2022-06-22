@@ -1,4 +1,4 @@
-import { Wrapper, HeadingSection } from './FirstSection.styles';
+import { Wrapper, HeadingSection, ImageSection } from './FirstSection.styles';
 import Image from 'next/image';
 import Waves from '../../assets/icons/Waves.svg';
 
@@ -12,7 +12,9 @@ const FirstSection = () => {
           <button>Explore</button>
         </div>
       </HeadingSection>
-      <Image width="500" height="600" layout="responsive" alt="waves" src={Waves} />
+      <ImageSection>
+        <Image width="500" height="600" layout="responsive" alt="waves" src={Waves} />
+      </ImageSection>
     </Wrapper>
   );
 };

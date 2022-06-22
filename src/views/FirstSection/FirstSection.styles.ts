@@ -1,29 +1,40 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  top: 15vh;
   position: relative;
+  top: 15vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
 
-  @media (min-width: 700px) {
-    height: 70vh;
+  @media (min-width: 1000px) {
+    top: 5vh;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
-export const HeadingSection = styled.div`
-  transform: translateY(-10%);
+export const ImageSection = styled.div`
+  position: relative;
   width: 100%;
-  position: absolute;
-  z-index: 1;
+`;
+
+export const HeadingSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transform: translateY(-10%);
   padding: 2rem;
+  position: absolute;
+  z-index: 1;
 
   @media (min-width: 650px) {
-    transform: translateY(5%);
+    transform: translateY(10%);
+  }
+
+  @media (min-width: 1000px) {
+    height: 100%;
   }
 
   h1 {
@@ -43,6 +54,10 @@ export const HeadingSection = styled.div`
     @media (min-width: 700px) {
       font-size: ${({ theme }) => theme.fontSize.xxl};
     }
+
+    @media (min-width: 1000px) {
+      font-size: 6.5rem;
+    }
   }
 
   div {
@@ -51,7 +66,12 @@ export const HeadingSection = styled.div`
     align-items: center;
     justify-content: space-around;
 
+    @media (min-width: 1000px) {
+      transform: translateY(20%);
+    }
+
     button {
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -68,6 +88,11 @@ export const HeadingSection = styled.div`
         width: 15rem;
         margin-right: 2rem;
         font-size: ${({ theme }) => theme.fontSize.s};
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 1.8rem;
+        margin-left: 20rem;
       }
     }
 
