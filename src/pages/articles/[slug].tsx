@@ -1,7 +1,8 @@
 import { Category } from '../../components/atoms/Category/Category';
-import { Wrapper, ImageWrapper, ContentWrapper } from './articles.styles';
+import { Wrapper, ImageWrapper, ContentWrapper, InfoWrapper } from './articles.styles';
 import { ArticleExtendedBody, ArticlesType } from '../../components/organisms/Articles/Articles.types';
 import { GetStaticProps } from 'next';
+import WeraPhoto from '../../assets/icons/WeraPhoto.png';
 import Footer from '../../components/organisms/Footer/Footer';
 import Image from 'next/image';
 import PageTemplate from '../../components/templates/PageTemplate/PageTemplate';
@@ -32,6 +33,12 @@ const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title,
             <h1>{title}</h1>
             <Category categoryType={category.title} />
             <p>{content}</p>
+
+            <InfoWrapper>
+              <Image src={WeraPhoto} alt="author" layout="responsive" width="100" height="100" />
+            </InfoWrapper>
+            <h1>Autor: Weronika Latala</h1>
+            <p>data</p>
           </ContentWrapper>
         </Wrapper>
       </PageTemplate>
