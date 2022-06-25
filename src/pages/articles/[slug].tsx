@@ -1,10 +1,14 @@
-import React from 'react';
+import { Category } from '../../components/atoms/Category/Category';
+import { Wrapper, ImageWrapper, ContentWrapper } from './articles.styles';
 import { ArticleExtendedBody, ArticlesType } from '../../components/organisms/Articles/Articles.types';
+import { GetStaticProps } from 'next';
+import Footer from '../../components/organisms/Footer/Footer';
+import Image from 'next/image';
+import PageTemplate from '../../components/templates/PageTemplate/PageTemplate';
 import Head from 'next/head';
 import axios from 'axios';
-import { GetStaticProps } from 'next';
 
-const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title, slug, thumbnail, category, description, id, seo } }) => {
+const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title, content, slug, thumbnail, category, description, id, seo } }) => {
   return (
     <>
       <Head>
@@ -19,9 +23,19 @@ const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title,
         <meta name="twitter:site" content="@communite__" />
         <meta name="twitter:creator" content="@communite__" />
       </Head>
-      <div>
-        <p>{title}</p>
-      </div>
+      <PageTemplate>
+        <Wrapper>
+          <ImageWrapper>
+            <Image src={seo.image.url} alt={title} layout="fill" />
+          </ImageWrapper>
+          <ContentWrapper>
+            <h1>{title}</h1>
+            <Category categoryType={category.title} />
+            <p>{content}</p>
+          </ContentWrapper>
+        </Wrapper>
+      </PageTemplate>
+      <Footer />
     </>
   );
 };
