@@ -16,9 +16,10 @@ export const Wrapper = styled.div`
     text-decoration: none;
     color: black;
     font-size: ${({ theme }) => theme.fontSize.s};
-  }
+    cursor: pointer;
 
-  //   &.active {
-  //     opacity: 1;
-  //   }
+    @media (min-width: 700px) {
+      font-size: 1.75rem;
+    }
+  }
 `;

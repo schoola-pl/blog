@@ -74,7 +74,6 @@ export default async function handler(
         }
       }
     );
-
     const allArticles = data.allArticles;
     if (!isExtended) {
       const categoriedArticles = allArticles.reduce((acc: ArticlesType, article: ArticleBody) => {

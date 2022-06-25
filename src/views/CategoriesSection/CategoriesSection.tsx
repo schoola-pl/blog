@@ -13,9 +13,8 @@ const CategoriesSection: React.FC<{
         Kategorie <span>postów</span>
       </h1>
       <CategoriesList>
-        <Category onClick={() => setCategory('all')} categoryType="Wszystkie" />
         {categories.map((category) => (
-          <Category onClick={() => setCategory(category)} key={`id-${category}-${Math.floor(Math.random() * 100)}`} categoryType={category} />
+          <Category onClick={() => setCategory(category)} key={category} categoryType={category} />
         ))}
       </CategoriesList>
     </Wrapper>
