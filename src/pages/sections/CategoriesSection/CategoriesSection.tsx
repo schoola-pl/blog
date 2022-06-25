@@ -1,6 +1,6 @@
 import { CategoriesList, Wrapper } from './Categories.styles';
-import { Category } from '../../components/atoms/Category/Category';
-import { CategoriesType } from '../../components/organisms/Articles/Articles.types';
+import { Category } from '../../../components/atoms/Category/Category';
+import { CategoriesType } from '../../../components/organisms/Articles/Articles.types';
 import React from 'react';
 
 const CategoriesSection: React.FC<{

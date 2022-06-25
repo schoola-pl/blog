@@ -1,6 +1,6 @@
 import { Wrapper, HeadingSection, ImageSection } from './FirstSection.styles';
 import Image from 'next/image';
-import Waves from '../../assets/icons/Waves.svg';
+import Waves from '../../../assets/icons/Waves.svg';
 
 const FirstSection = () => {
   return (

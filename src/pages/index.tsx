@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageTemplate from '../components/templates/PageTemplate/PageTemplate';
-import FirstSection from '../views/FirstSection/FirstSection';
+import FirstSection from './sections/FirstSection/FirstSection';
 import Footer from '../components/organisms/Footer/Footer';
 import Articles from '../components/organisms/Articles/Articles';
 import axios from 'axios';
