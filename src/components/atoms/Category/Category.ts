@@ -9,13 +9,13 @@ const categoriesStyles = (categoryType: string) => {
         backgroundColor: theme.colors.lightRed,
         categoryType
       };
-    case 'Edukacja':
+    case 'Świat edukacji':
       return {
         color: theme.colors.darkBlue,
         backgroundColor: theme.colors.accentBlue,
         categoryType
       };
-    case 'Usprawnienia':
+    case 'Technologia w szkole':
       return {
         color: theme.colors.darkGreen,
         backgroundColor: theme.colors.lightGreen,
@@ -27,7 +27,7 @@ const categoriesStyles = (categoryType: string) => {
         backgroundColor: theme.colors.lightPurple,
         categoryType
       };
-    case 'Hajs':
+    case 'Konkursy i olimpiady':
       return {
         color: theme.colors.darkYellow,
         backgroundColor: theme.colors.lightYellow,
@@ -68,14 +68,26 @@ export const Category = styled.button<{ categoryType: string; small?: boolean }>
   }
 
   @media (min-width: 700px) {
-    width: 14rem;
-    height: 5.5rem;
+    padding: 2rem;
+  }
+
+  @media (min-width: 1500px) {
+    min-width: 24rem;
+  }
+
+  @media (min-width: 1500px) {
+    width: 16rem;
+    cursor: pointer;
   }
 
   ${({ small }) =>
     small &&
     `
-   padding: 1rem 3rem;
+    padding: 1rem 3rem;
     opacity: 1;
+
+    @media (min-width: 1500px) {
+     min-width: 4rem;
+    }
   `}
 `;
