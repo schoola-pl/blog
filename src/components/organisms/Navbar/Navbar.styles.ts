@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   z-index: 999999999;
 
+  p,
   a {
     text-decoration: none;
     color: black;
