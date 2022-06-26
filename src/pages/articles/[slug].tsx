@@ -9,8 +9,11 @@ import PageTemplate from '../../components/templates/PageTemplate/PageTemplate';
 import Head from 'next/head';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import { format } from 'date-fns';
 
-const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title, content, slug, thumbnail, category, description, id, seo } }) => {
+const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title, _firstPublishedAt, content, slug, category, seo } }) => {
+  const publishDate = format(new Date(_firstPublishedAt), 'yyyy-MM-dd');
+
   return (
     <>
       <Head>
@@ -40,7 +43,7 @@ const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title,
               </PhotoWrapper>
               <div>
                 <h1>Autor: Weronika Latala</h1>
-                <p>data publikacji: 12.12.2022</p>
+                <p>data publikacji: {publishDate}</p>
               </div>
             </AuthorWrapper>
           </ContentWrapper>
