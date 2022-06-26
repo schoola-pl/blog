@@ -7,8 +7,22 @@ export const Wrapper = styled.article`
   margin-bottom: 4rem;
   border-radius: 2rem;
   overflow: hidden;
-  position: relative;
   cursor: pointer;
+
+  div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  @media (min-width: 1500px) {
+    height: 40rem;
+    width: 44rem;
+
+    &:last-child {
+      transform: translateY(-5%);
+    }
+  }
 `;
 
 export const Header = styled.header`

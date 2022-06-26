@@ -6,10 +6,10 @@ const FirstSection = () => {
   return (
     <Wrapper>
       <HeadingSection>
-        <h1>Lorem ipsum dolor</h1>
+        <h1>Unowocześnij swoją szkołę.</h1>
         <div>
-          <p>sitetur adipiscing elit sed diam non json json</p>
-          <button>Explore</button>
+          <p>Co dwa tygodnie znajdziesz tutaj wpis, jak prowadzić placówkę edukacyjną nowej generacji!</p>
+          <button>Zobacz jak!</button>
         </div>
       </HeadingSection>
       <ImageSection>

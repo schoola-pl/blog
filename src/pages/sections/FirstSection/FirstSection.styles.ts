@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const ImageSection = styled.div`
   position: relative;
+  padding: 0rem;
   width: 100%;
 `;
 
@@ -35,6 +36,10 @@ export const HeadingSection = styled.div`
 
   @media (min-width: 1000px) {
     height: 100%;
+  }
+
+  @media (min-width: 1500px) {
+    transform: translateY(20%);
   }
 
   h1 {
@@ -93,6 +98,7 @@ export const HeadingSection = styled.div`
       @media (min-width: 1000px) {
         font-size: 1.8rem;
         margin-left: 20rem;
+        min-width: 23rem;
       }
     }
 

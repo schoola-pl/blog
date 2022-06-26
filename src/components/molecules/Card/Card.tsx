@@ -10,7 +10,9 @@ const Card: React.FC<{ article: ArticleBody }> = ({ article: { title, slug, cate
   return (
     <Wrapper onClick={() => router.push(`/articles/${slug}`)}>
       <Header>
-        <Image src={thumbnail.url} alt="article photo" height="200" width="370" />
+        <div>
+          <Image src={thumbnail.url} alt="article photo" layout="responsive" height="200" width="370" />
+        </div>
         <InfoSection>
           <h1>{title}</h1>
           <Category categoryType={`${category.title}`} small />

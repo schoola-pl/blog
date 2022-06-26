@@ -7,6 +7,15 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (min-width: 900px) {
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 1500px) {
+    padding: 5rem;
+    transform: translateY(0%);
+  }
+
   h1 {
     font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: ${({ theme }) => theme.fontWeight.semibold};
