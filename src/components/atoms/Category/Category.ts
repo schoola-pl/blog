@@ -74,6 +74,7 @@ export const Category = styled.button<{ categoryType: string; small?: boolean }>
 
   @media (min-width: 1500px) {
     width: 16rem;
+    cursor: pointer;
   }
 
   ${({ small }) =>
