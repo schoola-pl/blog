@@ -15,6 +15,7 @@ export type ArticleExtendedBody = {
   description: string;
   thumbnail: { url: string };
   category: { title: string };
+  _firstPublishedAt: Date;
 };
 
 export type ArticlesType = { [k: string]: ArticleBody[] };

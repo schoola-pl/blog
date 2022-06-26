@@ -1,9 +1,12 @@
 import { Wrapper } from './Navbar.styles';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <Wrapper>
-      <a>Blog</a>
+      <p onClick={() => router.push(`/`)}>Blog</p>
       <a href="https://schoola.pl" target="_blank" rel="noopener noreferrer">
         O nas
       </a>
