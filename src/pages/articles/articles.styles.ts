@@ -8,10 +8,18 @@ export const Wrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   position: relative;
-  padding: 12rem;
+  padding: 10rem;
   overflow: hidden;
   border-radius: 1rem;
   margin: 2rem;
+
+  @media (min-width: 500px) {
+    padding: 15rem;
+  }
+
+  @media (min-width: 750px) {
+    padding: 22rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`
