@@ -38,9 +38,6 @@ export const HeadingSection = styled.div`
     transform: translateY(-30%);
   }
 
-  @media (min-width: 1500px) {
-  }
-
   h1 {
     color: black;
     font-size: ${({ theme }) => theme.fontSize.xl};
@@ -103,9 +100,13 @@ export const HeadingSection = styled.div`
 
     p {
       padding-top: 1rem;
-      font-size: ${({ theme }) => theme.fontSize.s};
+      font-size: ${({ theme }) => theme.fontSize.xs};
       color: black;
       z-index: 99999;
+
+      @media (min-width: 400px) {
+        font-size: ${({ theme }) => theme.fontSize.s};
+      }
 
       @media (min-width: 440px) {
         font-size: 1.75rem;
