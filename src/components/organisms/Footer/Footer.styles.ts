@@ -13,6 +13,10 @@ export const Wrapper = styled.div`
   p {
     margin: 0.2rem 0;
     padding: 0;
+
+    @media (min-width: 1500px) {
+      font-size: ${({ theme }) => theme.fontSize.s};
+    }
   }
 
   @media (min-width: 728px) {
@@ -22,5 +26,11 @@ export const Wrapper = styled.div`
     p {
       margin: 0;
     }
+  }
+
+  @media (min-width: 1500px) {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
   }
 `;
