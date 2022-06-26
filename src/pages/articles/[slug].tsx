@@ -8,6 +8,7 @@ import Image from 'next/image';
 import PageTemplate from '../../components/templates/PageTemplate/PageTemplate';
 import Head from 'next/head';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title, content, slug, thumbnail, category, description, id, seo } }) => {
   return (
@@ -32,8 +33,7 @@ const Article: React.FC<{ article: ArticleExtendedBody }> = ({ article: { title,
           <ContentWrapper>
             <h1>{title}</h1>
             <Category categoryType={category.title} />
-            <p>{content}</p>
-
+            <ReactMarkdown>{content}</ReactMarkdown>
             <InfoWrapper>
               <Image src={WeraPhoto} alt="author" layout="responsive" width="100" height="100" />
             </InfoWrapper>
