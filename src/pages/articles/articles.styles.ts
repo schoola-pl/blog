@@ -27,11 +27,21 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const InfoWrapper = styled.div`
+export const PhotoWrapper = styled.div`
   position: relative;
-  height: 10rem;
-  width: 10rem;
-  border: 1px solid black;
+  height: 9rem;
+  width: 9rem;
   border-radius: 5rem;
   overflow: hidden;
+`;
+
+export const AuthorWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+
+  p {
+    transform: translateY(-20%);
+    padding: 0;
+  }
 `;
