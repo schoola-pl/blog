@@ -44,5 +44,14 @@ export const InfoSection = styled.div`
     padding: 1.5rem;
     font-weight: ${({ theme }) => theme.fontWeight.semibold};
     font-size: ${({ theme }) => theme.fontSize.s};
+
+    @media (min-width: 1500px) {
+      padding: 2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    height: 17rem;
   }
 `;
