@@ -35,11 +35,10 @@ export const HeadingSection = styled.div`
   }
 
   @media (min-width: 1000px) {
-    height: 100%;
+    transform: translateY(-30%);
   }
 
   @media (min-width: 1500px) {
-    transform: translateY(20%);
   }
 
   h1 {
