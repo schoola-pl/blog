@@ -9,7 +9,7 @@ const FirstSection = () => {
         <h1>Unowocześnij swoją szkołę.</h1>
         <div>
           <p>Co dwa tygodnie znajdziesz tutaj wpis, jak prowadzić placówkę edukacyjną nowej generacji!</p>
-          <button>Zobacz jak!</button>
+          <a href="#categories">Zobacz jak!</a>
         </div>
       </HeadingSection>
       <ImageSection>

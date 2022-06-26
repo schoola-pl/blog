@@ -8,7 +8,7 @@ const CategoriesSection: React.FC<{
   categories: CategoriesType;
 }> = ({ setCategory, categories }) => {
   return (
-    <Wrapper>
+    <Wrapper id="categories">
       <h1>
         Kategorie <span>postów</span>
       </h1>

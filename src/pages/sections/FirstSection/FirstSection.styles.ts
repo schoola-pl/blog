@@ -71,13 +71,15 @@ export const HeadingSection = styled.div`
       transform: translateY(20%);
     }
 
-    button {
+    a {
       cursor: pointer;
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
       border: none;
       background-color: ${({ theme }) => theme.colors.mainBlue};
+      font-size: ${({ theme }) => theme.fontSize.xs};
       color: white;
       height: 4.75rem;
       min-width: 13rem;
