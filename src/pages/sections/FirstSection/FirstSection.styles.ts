@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const ImageSection = styled.div`
   position: relative;
+  padding: 0rem;
   width: 100%;
 `;
 
@@ -34,7 +35,7 @@ export const HeadingSection = styled.div`
   }
 
   @media (min-width: 1000px) {
-    height: 100%;
+    transform: translateY(-30%);
   }
 
   h1 {
@@ -70,13 +71,15 @@ export const HeadingSection = styled.div`
       transform: translateY(20%);
     }
 
-    button {
+    a {
       cursor: pointer;
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
       border: none;
       background-color: ${({ theme }) => theme.colors.mainBlue};
+      font-size: ${({ theme }) => theme.fontSize.xs};
       color: white;
       height: 4.75rem;
       min-width: 13rem;
@@ -93,14 +96,19 @@ export const HeadingSection = styled.div`
       @media (min-width: 1000px) {
         font-size: 1.8rem;
         margin-left: 20rem;
+        min-width: 23rem;
       }
     }
 
     p {
       padding-top: 1rem;
-      font-size: ${({ theme }) => theme.fontSize.s};
+      font-size: ${({ theme }) => theme.fontSize.xs};
       color: black;
       z-index: 99999;
+
+      @media (min-width: 400px) {
+        font-size: ${({ theme }) => theme.fontSize.s};
+      }
 
       @media (min-width: 440px) {
         font-size: 1.75rem;

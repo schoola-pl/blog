@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   }
 
   @media (min-width: 1500px) {
-    margin: 12vh 20rem 5rem 20rem;
+    margin: 12vh 40rem 8rem 40rem;
   }
 `;
 
@@ -30,7 +30,7 @@ export const ImageWrapper = styled.div`
   }
 
   @media (min-width: 1000px) {
-    padding: 28rem;
+    padding: 30rem;
   }
 `;
 
@@ -104,5 +104,9 @@ export const AuthorWrapper = styled.div`
 
   @media (min-width: 1100px) {
     width: 60%;
+  }
+
+  @media (min-width: 1500px) {
+    width: 45%;
   }
 `;
