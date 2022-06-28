@@ -2,6 +2,8 @@ import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/do
 import { ServerStyleSheet } from 'styled-components';
 import MainTemplate from '../components/templates/MainTemplate';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-expect-error
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
